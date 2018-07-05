@@ -1,0 +1,104 @@
+
+p{
+    /*text-align: justify;*/
+    font-size: 12px;
+
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+}
+.w3-table td, .w3-table th, .w3-table-all td, .w3-table-all th{
+    font-size: 11px;
+    vertical-align: middle;
+    padding: 4px;
+}
+.w3-table th:first-child, .w3-table td:first-child, .w3-table-all th:first-child, .w3-table-all td:first-child {
+    padding-left: 4px;
+}
+form{
+    font-size: 12px;   
+}
+/*Estilos para la leyenda*/
+#legend {
+    background: #FFF;
+    padding: 10px;
+    margin: 5px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+.indicador {
+    border: 1px solid;
+    height: 12px;
+    width: 12px;
+    margin-right: 3px;
+    margin-top: 6px;
+    float: left;
+}
+.muyalta {
+    background: #f27072;
+}
+
+.alta {
+    background: #fcba86;
+}
+
+.moderada {
+    background: #fcfca2;
+}
+
+.baja {
+    background: #b5c4b1;
+}
+
+.muybaja {
+    background: #7cb4cf;
+}
+
+.w3-check,.w3-radio{zoom: 0.7}
+
+
+.contenedor-arbol, .contenedor-arbol ul, .contenedor-arbol li {
+    position: relative;
+}
+
+.contenedor-arbol ul {
+    list-style: none;
+    padding-left:20px;
+}
+
+.contenedor-arbol li::before, .contenedor-arbol li::after {
+    content: "";
+    position: absolute;
+    left: -16px;
+}
+
+.contenedor-arbol li::before {
+    /*border-top: 2px solid green;*/
+    border-top: 2px solid white;
+    top: 8px;
+    width: 8px;
+    height: 0;
+}
+
+.contenedor-arbol li::after {
+    /*border-left: 2px solid brown;*/
+    border-top: 2px solid white;
+    height: 100%;
+    width: 0px;
+    top: 2px;
+}
+.contenedor-arbol .first li::before{
+    /*border-top: 2px solid white;*/
+    border-top: 2px solid black;
+}
+.contenedor-arbol .first li::after{
+    /*border-top: 2px solid white;*/
+    border-left: 2px solid black;
+}
+.contenedor-arbol ul > li:last-child::after {
+    height: 8px;
+}
+
+img .info{
+    margin-bottom: 2px;
+}
