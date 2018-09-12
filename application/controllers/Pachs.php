@@ -34,7 +34,7 @@
                         'actividad'=>$fila->sec_actividad,
                         'descripcion'=>$fila->sec_descripcion,
                         'imagen'=>base_url('/images/pachs') . '/' . $fila->sec_imagen,
-
+                        'presion'=>$fila->sec_presion,
                     ),
                     'geometry'=>array(
                         'type'=>'Point',

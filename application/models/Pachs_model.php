@@ -40,6 +40,7 @@ class Pachs_model extends CI_Model
 		return $this->db->get('view_pachs');
 	}
 
+
 	public function get_listar_pachs_G($uni_id){
 
 		if ($uni_id !="null") {
@@ -52,13 +53,14 @@ class Pachs_model extends CI_Model
 		return $query->result();
 	}
 
+
 	public function get_listar_PA()
 	{
 		$query= $this->db->get('view_pachss');
 		return $query->row();
 	}
 
-
+	
     //lista de coberturas para funcion json
 	public function get_coberturas_json($uni_id) {
 		$this->db->where('uni_id',$uni_id);
@@ -74,6 +76,7 @@ class Pachs_model extends CI_Model
 		return $query->row();
 	}
 
+	
 
 }
 ?>

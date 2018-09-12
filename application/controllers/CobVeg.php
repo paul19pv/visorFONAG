@@ -21,6 +21,7 @@ class CobVeg extends CI_Controller {
         $data['ficha']= $this->load->view('cobveg/componentes/ficha','',TRUE);
         $this->load->view('cobveg/home', $data);
     }
+    
     //lista de sectores por unidad hídrica
     public function filtro($uni_id){
         $filtro['sectores']= $this->cobveg->get_sectores($uni_id);
@@ -29,7 +30,7 @@ class CobVeg extends CI_Controller {
         return $data;
     }
 
-    
+        
     public function view_capas($sec_id) {
         $data['sector'] = $this->cobveg->get_sector($sec_id);
         $data['datos'] = $this->cobveg->get_coberturas($sec_id);

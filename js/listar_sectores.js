@@ -12,9 +12,18 @@ function getSelectsectores(){
 		async: false}).responseText;
 
 	capas = JSON.parse(capas)
+
 	map.data.addGeoJson(capas)
+	map.data.setStyle(style_points);
 	map.data.addListener('click', info_map);
 
+}
+
+//funcion para cambiar la imagen del mapa
+function style_points(feature) {
+	return{
+    	icon: url_base+'images/iconos/arco_conservacion02.png',
+    };
 }
 
 //
@@ -23,11 +32,8 @@ function info_map(event){
 	geo=point.getGeometry()
 	geo.forEachLatLng(function(LatLng){
 		point_info = new google.maps.LatLng({lat: LatLng.lat(), lng: LatLng.lng()}); 
-		
-	});
-
-
-
+});
+	
 	var infowindow = new google.maps.InfoWindow({
 		
     });
@@ -36,10 +42,15 @@ function info_map(event){
 
 	$("#div_capa").show();
 	
-	$("#unidad").html('<p class="w3-margin-0">' + point.getProperty('unidad') + '</p>');
-	$("#sector").html('<p class="w3-margin-0">' + point.getProperty('sector') + '</p>');
-	$("#actividad").html('<p class="w3-margin-0">' + point.getProperty('actividad') + '</p>');
-	$("#descripcion").html('<p class="w3-margin-0">' + point.getProperty('descripcion') + '</p>');
+	$("#unidad").html('<p class="w3-margin-0" style="text-align: justify-all;"> ' + point.getProperty('unidad') + '</p>');
+	$("#sector").html('<p class="w3-margin-0" style="text-align: justify-all;">' + point.getProperty('sector') + '</p>');
+	$("#presion").html('<p class="w3-margin-0" style="text-align: justify-all;">' + point.getProperty('presion') + '</p>');
+	$("#actividad").html('<p class="w3-margin-0" style="text-align: justify-all;">' + point.getProperty('actividad') + '</p>');
+	$("#descripcion").html('<p class="w3-margin-0" style="text-align: justify-all;">' + point.getProperty('descripcion') + '</p>');
+	$("#infraestructura").html('<p class="w3-margin-0" style="text-align: justify-all;">' + point.getProperty('infraestructura') + '</p>');
+	$("#IGD").html('<p class="w3-margin-0" style="text-align: justify-all;">' + point.getProperty('IGD') + '</p>');
+	$("#IGestion").html('<p class="w3-margin-0" style="text-align: justify-all;">' + point.getProperty('IGestion') + '</p>');
+	$("#especies").html('<p class="w3-margin-0" style="text-align: justify-all;">' + point.getProperty('especies') + '</p>');
 	$("#imagen").attr('src', point.getProperty('imagen'));
 
 	
