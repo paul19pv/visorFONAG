@@ -9,6 +9,7 @@ function getSelectUnidades() {
 	map.data.forEach(function(feature) {
 		map.data.remove(feature);
 	});
+	$("#div_Poligono").hide();
 	
 	get_coberturas_sector();
 	//get_poligonos_sector();
@@ -65,16 +66,17 @@ function style_bf(feature) {
 
 function info_map(event){
 	var capa = event.feature;
+
 	//div_Poligono
 	$("#div_Poligono").show();
-	$("#unidad").html('<p">' +capa.getProperty('unidad') + '</p>');
-	$("#sector").html('<p">' +capa.getProperty('sector') + '</p>');
-	$("#presion").html('<p">' +capa.getProperty('presion') + '</p>');
-	$("#actividad").html('<p">' +capa.getProperty('actividad') + '</p>');
-	$("#infraestructura").html('<p">' +capa.getProperty('infraestructura') + '</p>');
-	$("#IGD").html('<p">' +capa.getProperty('IGD') + '</p>');
-	$("#IGestion").html('<p">' +capa.getProperty('IGestion') + '</p>');
-	$("#especies").html('<p">' +capa.getProperty('especies') + '</p>');
+	$("#unidad").html('<p class="w3-margin-0" style="text-align: justify-all;">' +capa.getProperty('unidad') + '</p>');
+	$("#sector").html('<p class="w3-margin-0" style="text-align: justify-all;">' +capa.getProperty('sector') + '</p>');
+	$("#presion").html('<p class="w3-margin-0" style="text-align: justify-all;">' +capa.getProperty('presion') + '</p>');
+	$("#actividad").html('<p class="w3-margin-0" style="text-align: justify-all;">' +capa.getProperty('actividad') + '</p>');
+	$("#infraestructura").html('<p class="w3-margin-0" style="text-align: justify-all;">' +capa.getProperty('infraestructura') + '</p>');
+	$("#IGD").html('<p class="w3-margin-0" style="text-align: justify-all;">' +capa.getProperty('IGD') + '</p>');
+	$("#IGestion").html('<p class="w3-margin-0" style="text-align: justify-all;">' +capa.getProperty('IGestion') + '</p>');
+	$("#especies").html('<p class="w3-margin-0" style="text-align: justify-all;">' +capa.getProperty('especies') + '</p>');
 }
 
 

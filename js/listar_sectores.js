@@ -2,6 +2,7 @@ function getSelectsectores(){
 	map.data.forEach(function(feature) {
 		map.data.remove(feature);
 	});
+	$("#div_capa").hide();
 	var selectedsectores = document.getElementById('unidades').value;
 	console.log(selectedsectores);
 
@@ -22,7 +23,7 @@ function getSelectsectores(){
 //funcion para cambiar la imagen del mapa
 function style_points(feature) {
 	return{
-    	icon: url_base+'images/iconos/arco_conservacion02.png',
+    	icon: url_base+'images/iconos/icono_conservacion.png',
     };
 }
 
